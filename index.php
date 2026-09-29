@@ -3,6 +3,9 @@
 <html lang="es">
 <head>
     <title>Ejemplo Servidor</title>
+    <style>
+        @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+    </style>
 </head>
 <body>
 
