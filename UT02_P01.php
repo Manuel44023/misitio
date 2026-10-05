@@ -1,11 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador</title>
+</head>
+<body>
+
 <?php
+
 if (isset($_POST["numero"])) {
+
     $numero = $_POST["numero"];
+
 } elseif (isset($_GET["sumar"])) {
+
     $numero = $_GET["numero"] + 1;
+
 } else {
+
     $numero = null;
+
 }
+
 ?>
 
 <?php if ($numero === null): ?>
@@ -26,3 +42,6 @@ if (isset($_POST["numero"])) {
     </a>
 
 <?php endif; ?>
+
+</body>
+</html>
