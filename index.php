@@ -12,15 +12,18 @@
 <body>
 
     <?php
-        $color = $_GET['color'] ?? 'black'; // Valor por defecto si no se proporciona color
+        $color = $_GET['color'] ?? 'green';
+        $nombre = $_POST['nombre'] ?? 'Invitado'; // Valor por defecto si no se proporciona nombre
     ?>
 
-    <h1 style="color: #33FFAA">
+    <h1 style="color: <?php echo $color; ?>;">
         <?php 
-            $usuario = "Carlos";
-            echo "Bienvenido a la web, " . $usuario; 
+            $usuario = $nombre;
+            echo "Bienvenido a la web, " . $nombre; 
         ?>
     </h1>
+
+    <div></div>
 
     <div class="buttons">
   <button class="button is-info">Info</button>
@@ -29,7 +32,11 @@
   <button class="button is-danger">Danger</button>
 </div>
 
-
+<form name="myform" method="POST" action="index.php">
+    Escribe tu nombre
+    <input class="input is-link"type="text" placeholder="Juanito"
+    />
+    <input type="submit" class=""sub>
 </body>
 </html>
 
