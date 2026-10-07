@@ -2,46 +2,19 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Contador</title>
+    <title>Formulario</title>
 </head>
 <body>
 
-<?php
+<h2>Introduce un número</h2>
 
-if (isset($_POST["numero"])) {
+<form action="UT02_P01B.php" method="POST">
 
-    $numero = $_POST["numero"];
+    <input type="number" name="numero">
 
-} elseif (isset($_GET["sumar"])) {
+    <button type="submit">Enviar</button>
 
-    $numero = $_GET["numero"] + 1;
-
-} else {
-
-    $numero = null;
-
-}
-
-?>
-
-<?php if ($numero === null): ?>
-
-    <h2>Introduce un número</h2>
-
-    <form method="POST">
-        <input type="number" name="numero">
-        <button type="submit">Enviar</button>
-    </form>
-
-<?php else: ?>
-
-    <h2>Número actual: <?= $numero ?></h2>
-
-    <a href="?sumar=1&numero=<?= $numero ?>">
-        <button>Sumar 1</button>
-    </a>
-
-<?php endif; ?>
+</form>
 
 </body>
 </html>
