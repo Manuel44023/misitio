@@ -8,13 +8,16 @@
 
     <h1>Calcular sueldo</h1>
 
+    <!-- Formulario -->
     <form action="calcular.php" method="post">
 
+        <!-- Sueldo -->
         <label for="sueldo">Sueldo:</label>
         <input type="number" name="sueldo" id="sueldo" min="1001" required>
 
         <br><br>
 
+        <!-- Puesto -->
         <label for="puesto">Puesto:</label>
         <select name="puesto" id="puesto" required>
             <option value="base">Base</option>
@@ -24,6 +27,7 @@
 
         <br><br>
 
+        <!-- Enviar -->
         <input type="submit" value="Calcular">
 
     </form>

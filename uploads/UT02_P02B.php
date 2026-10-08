@@ -1,16 +1,20 @@
 <?php
-
+// Recogemos datos
 $sueldo = $_POST["sueldo"];
 $puesto = $_POST["puesto"];
 
+// Calculamos porcentaje
 if ($puesto == "base") {
-    $porcentaje = 10;
+    $porcentaje = 10; // Base
 } elseif ($puesto == "directivo") {
-    $porcentaje = 15;
+    $porcentaje = 15; // Directivo
+} elseif ($puesto == "alto_cargo") {
+    $porcentaje = 20; // Alto cargo
 } else {
-    $porcentaje = 20;
+    $porcentaje = 0; // Otro caso
 }
 
+// Calculamos complemento y total
 $complemento = $sueldo * $porcentaje / 100;
 $sueldoFinal = $sueldo + $complemento;
 
@@ -24,6 +28,7 @@ $sueldoFinal = $sueldo + $complemento;
 </head>
 <body>
 
+    <!-- Mostramos los resultados al usuario -->
     <p>El sueldo base es de <?php echo $sueldo; ?>€</p>
 
     <p>El complemento es del <?php echo $porcentaje; ?>%</p>

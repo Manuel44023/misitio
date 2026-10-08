@@ -10,8 +10,10 @@
 
 <?php
 
+// Recorremos datos
 foreach ($_POST as $campo) {
 
+    // Mostramos valor
     var_dump($campo);
 
 }
