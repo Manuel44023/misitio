@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario de práctica</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+<body>
+	<main class="section">
+		<div class="container" style="max-width: 640px;">
+			<h1 class="title">Formulario de práctica</h1>
+			<form action="UT02_P03B.php" method="POST" class="box">
+				<div class="field">
+					<label class="label" for="nombre">Nombre</label>
+					<div class="control">
+						<input class="input" type="text" id="nombre" name="nombre" required>
+					</div>
+				</div>
+
+				<div class="field">
+					<label class="label" for="edad">Edad</label>
+					<div class="control">
+						<input class="input" type="number" id="edad" name="edad" min="0" step="1" required>
+					</div>
+				</div>
+
+				<fieldset class="field">
+					<legend class="label">Lenguajes que conoces</legend>
+					<label class="checkbox mr-4">
+						<input type="checkbox" name="lenguajes[]" value="PHP"> PHP
+					</label>
+					<label class="checkbox mr-4">
+						<input type="checkbox" name="lenguajes[]" value="JavaScript"> JavaScript
+					</label>
+					<label class="checkbox mr-4">
+						<input type="checkbox" name="lenguajes[]" value="Python"> Python
+					</label>
+				</fieldset>
+
+				<div class="field">
+					<div class="control">
+						<button class="button is-link" type="submit">Enviar datos</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</main>
+</body>
+</html>

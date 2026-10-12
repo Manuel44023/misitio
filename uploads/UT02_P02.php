@@ -9,7 +9,7 @@
     <h1>Calcular sueldo</h1>
 
     <!-- Formulario -->
-    <form action="calcular.php" method="post">
+    <form action="UT02_P02B.php" method="post">
 
         <!-- Sueldo -->
         <label for="sueldo">Sueldo:</label>
