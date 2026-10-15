@@ -1,0 +1,53 @@
+
+	<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UT03 - Práctica 01: Tarjeta de Perfil</title>
+<style>
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+</style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="//unpkg.com/alpinejs" defer></script>
+<script src="//unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+<section class="section">
+<div class="container" style="max-width: 500px;">
+<h1 class="title has-text-centered">Perfil de Usuario</h1>
+
+<div class="card">
+<div class="card-content">
+<div class="media">
+<div class="media-left">
+<figure class="image is-48x48">
+<i class="fa fa-user-circle fa-3x"></i>
+</figure>
+</div>
+<div class="media-content">
+<p class="title is-4">Carlos Gómez</p>
+<p class="subtitle is-6">
+<span class="tag is-warning">Editor</span>
+</p>
+</div>
+</div>
+
+<div class="content">
+<p><strong>Edad:</strong> 22 años</p>
+
+<!-- Sintaxis alternativa condicional -->
+<div class="notification is-success is-light py-2 px-3">
+<i class="fa fa-check-circle"></i> Usuario mayor de edad (Acceso habilitado).
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</body>
+
+</html>
