@@ -1,0 +1,88 @@
+
+<?php
+// Array asociativo con las tasas respecto a 1 euro
+$tasas = [
+    'EUR' => 1,
+    'USD' => 1.085,
+    'JPY' => 157.3
+];
+
+// Variables iniciales
+$cantidad = 250;
+$de = 'USD';
+$a = 'JPY';
+$resultado = 0;
+
+// Comprobar si se ha enviado el formulario
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    // Recoger los datos del formulario
+    $cantidad = $_POST['cantidad'];
+    $de = $_POST['de'];
+    $a = $_POST['a'];
+
+    // Comprobar que la cantidad es correcta
+    if (is_numeric($cantidad) && $cantidad >= 0) {
+
+        // Convertir primero la cantidad a euros
+        $euros = $cantidad / $tasas[$de];
+
+        // Convertir los euros a la moneda elegida
+        $resultado = $euros * $tasas[$a];
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de monedas</title>
+</head>
+<body>
+
+<h1>Conversor de divisas</h1>
+
+<form action="" method="POST">
+
+    Cantidad:
+    <input type="number" name="cantidad" value="<?= $cantidad ?>">
+
+    <br><br>
+
+    De:
+    <select name="de">
+        <option value="EUR">EUR</option>
+        <option value="USD" selected>USD</option>
+        <option value="JPY">JPY</option>
+    </select>
+
+    <br><br>
+
+    A:
+    <select name="a">
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="JPY" selected>JPY</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Convertir</button>
+
+</form>
+
+<?php
+// Mostrar el resultado solamente después de enviar el formulario
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (is_numeric($cantidad) && $cantidad >= 0) {
+        echo "<h2>$cantidad $de = " .
+             number_format($resultado, 3, ',', '.') . " $a</h2>";
+    } else {
+        echo "Cantidad incorrecta";
+    }
+}
+?>
+
+</body>
+</html>

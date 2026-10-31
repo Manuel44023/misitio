@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar canciones</title>
+</head>
+<body>
+
+<h1>Buscador de canciones</h1>
+
+<!-- Enviamos los datos mediante POST a p02-res.php -->
+<form action="p02-res.php" method="POST">
+
+    <!-- Campo de texto -->
+    Texto a buscar:
+    <input type="text" name="texto" required>
+
+    <br><br>
+
+    <!-- Radio buttons: solo permite elegir una opción -->
+    Buscar en:
+
+    <input type="radio" name="buscar_en" value="cancion">
+    Canciones
+
+    <input type="radio" name="buscar_en" value="album">
+    Álbumes
+
+    <input type="radio" name="buscar_en" value="ambos" checked>
+    Ambos
+
+    <br><br>
+
+    <!-- Desplegable -->
+    Género:
+
+    <select name="genero">
+        <option value="Todos">Todos</option>
+        <option value="Pop">Pop</option>
+        <option value="Rock">Rock</option>
+        <option value="Jazz">Jazz</option>
+        <option value="Blues">Blues</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Buscar</button>
+
+</form>
+
+</body>
+</html>
